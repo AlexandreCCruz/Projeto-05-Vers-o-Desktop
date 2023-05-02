@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    
+    --ff--heading: 'Staatliches', cursive;
+    --ff--texting: 'Roboto', sans-serif;
+    --ff--footer: 'Open Sans', sans-serif;
+
+    --bg-primary: hsl(218, 17%, 62%);
+    --bg-secondary: hsl(233, 100%, 97%);
+    --bg-tertiary: hsl(275, 18%, 79%);
+    --bg-quarternary: hsl(312, 91%, 96%);
+    --fc-primary: hsl(0, 0%, 100%);
+    --fc-secondary: hsl(232, 17%, 35%);
+
+    font-size: 62.5%;
+    --fs-heading: 4rem;
+    --fs-body: 2rem;
+    --fs-footer: 1.4rem;
+    background-color: var(--bg);
+}
+
+.page {
+    max-width: 38rem;
+    margin: 0 auto;
+    
+}
+
+@media (min-width: 930px) {
+
+    :root {
+        --fs-heading: 4.8rem;
+        --fs-body: 2rem;
+        --fs-footer: 1.6rem;
+    }
+    .page {
+        max-width: 135rem;
+        max-height: 85rem;
+        
+    
+    }
+    
+    .page {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      header img {
+        width: 100%;
+      }
+
+      header {
+        width: 30%;
+      }
+      
+      main {
+        max-height: 85rem;
+        width: 70%;
+        display: grid;
+        gap: 3.2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-self:center;
+      
+    }
+
+    h2 {
+        margin: -3rem -4rem;
+    }
+
+    h3 {
+        margin: -6rem -4rem;
+    }
+
+    .card:nth-child(1) {
+        bottom: 8.5rem;
+    }
+
+    .card:nth-child(3) {
+        bottom: 8.5rem;
+    }
+
+    .card:nth-child(4) {
+        bottom: 20rem;
+    }
+
+    .card:nth-child(5) {
+        bottom: 11.5rem;
+    }
+
+    .card:nth-child(6) {
+        bottom: 20rem;
+    }
+
+    footer {
+        position: absolute;
+        top: 75rem;
+        left: 70rem;
+        
+      }
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: var(--bg-primary);
+    text-align: center;
+    padding: 0 0 12rem;
+
+    animation: topdown 1500ms;
+}
+
+header img {
+    width: 70%;
+    margin: 3.2rem auto 3.2rem;
+}
+
+header h1 { 
+    font-family: var(--ff--heading);
+    font-size: var(--fs-heading);
+    color: var(--fc-primary);
+    background-color: var(--bg-tertiary);
+    padding-top: 2rem;
+    font-weight: 400;
+    line-height: 3.4rem;
+    height: 7rem;
+}
+
+header p {
+    font-family: var(--ff--texting);
+    font-size: var(--fs-body);
+    color: var(--fc-primary);
+    margin: 5rem 5rem 0;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+main {
+    display: grid;
+    background-color: var(--bg-secondary);
+    font-family: var(--ff--heading);
+    color: var(--fc-secondary);
+    padding: 6rem 3rem 0rem;
+    align-items: center;
+    text-align: center;
+
+    animation: downtop 1000ms 350ms backwards;
+}
+
+.card {
+    position: relative;
+    padding-bottom: 3.2rem;
+    transition-property: transform;
+    transition:all 200ms;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+h2 {
+    position: absolute; 
+    font-weight: 400;
+    bottom: 24rem;
+    left: 22rem;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: var(--fs-body);
+    background: var(--bg-quarternary);
+    border-radius: 2rem;
+
+}
+
+h3 {
+    position: absolute; 
+    font-weight: 400;
+    bottom: 44rem;
+    left: 22rem;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: var(--fs-body);
+    background: var(--bg-quarternary);
+    border-radius: 2rem;
+}
+
+footer {
+    font-family: var(--ff--footer);
+    font-size: var(--fs-footer);
+    color: var(--fc-secondary);
+    text-align: center;
+    font-weight: 400;
+    padding: 2rem 0 4rem;
+}
+
+footer span {
+    font-weight: 700;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-900px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateX(900px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
